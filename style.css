@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -51,11 +50,11 @@ a {
 }
 
 .brand img {
-    width: 45px;
-    height: 45px;
+    height: 38px;
+    width: auto;
     object-fit: contain;
+    display: block;
 }
-
 
 .brand-purple {
     color: var(--purple);
@@ -242,31 +241,21 @@ a {
     line-height: 1.8;
 }
 
-.status {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 9px 13px;
-    border: 1px solid #55218a;
-    border-radius: 4px;
-    color: #bd82ff;
-    font-size: 9px;
-    letter-spacing: 1px;
-}
-
 .assets-section {
     background: #0b0b12;
 }
 
 .asset-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 420px));
+    justify-content: center;
     gap: 20px;
 }
 
 .asset-card {
     background: var(--panel);
     border: 1px solid #252331;
-    padding: 32px 25px;
+    padding: 28px 25px;
     border-radius: 9px;
     transition: 0.3s;
 }
@@ -276,15 +265,35 @@ a {
     transform: translateY(-5px);
 }
 
-.asset-symbol {
-    color: #b56aff;
-    font-size: 35px;
-    margin-bottom: 25px;
+.asset-preview {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    border: 1px solid #292535;
 }
 
 .asset-card h3 {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     font-size: 18px;
+}
+
+.asset-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 18px;
+    border-radius: 5px;
+    background: var(--purple);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.25s;
+}
+
+.asset-btn:hover {
+    background: #9b35ff;
+    transform: translateY(-2px);
 }
 
 .about-section {
